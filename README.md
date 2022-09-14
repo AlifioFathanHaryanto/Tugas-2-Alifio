@@ -1,4 +1,4 @@
-Link deploy = https://github.com/AlifioFathanHaryanto/Tugas-2-Alifio 
+Link deploy = https://aplikasi-fio.herokuapp.com/katalog/  
 
 1. ![Bagan_Alifio](/Bagan_Alifio.jpg)
 
