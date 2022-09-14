@@ -1,62 +1,22 @@
-# Template Proyek Django PBP
+Link deploy = https://github.com/AlifioFathanHaryanto/Tugas-2-Alifio 
 
-Pemrograman Berbasis Platform (CSGE602022) - diselenggarakan oleh Fakultas Ilmu Komputer Universitas Indonesia, Semester Ganjil 2022/2023
+1. ![Bagan_Alifio](/Bagan_Alifio.jpg)
 
-*Read this in other languages: [Indonesian](README.md), [English](README.en.md)*
+2. Jelaskan kenapa menggunakan virtual environment? Apakah kita tetap dapat membuat aplikasi web berbasis Django tanpa menggunakan virtual environment?
+Virtual environment digunakan sebagai alat pembatas / pemisah virtual python environment agar tidak dapat diakses langsung dari luar / tanpa perantara. Virtual environment bersifat spesifik pada sebuah proyek. Dengan itu, kita dapat menjalankan proyek yang telah kita buat pada setiap versi Django yang terunduh pada laptop kita.
 
-## Pendahuluan
+Contoh : Saat kita dapat mengerjakan sebuah proyek pada Django 4.1.1 dengan baik, kemudian beberapa saat kemudian muncul versi 4.1.2. Setelah kita melakukan upgrade ke versi 4.1.2, virtual environment berperan dalam menjaga agar setiap aplikasi memiliki modulnya sendiri. Dengan itu, aplikasi yang kita buat saat versi Django di laptop kita adalah 4.1.1 akan masih dapat dijalankan walaupun kita sudah mengunduh Django versi 4.1.2 akibat adanya pemisahan modul.
 
-Repositori ini merupakan sebuah template yang dirancang untuk membantu mahasiswa yang sedang mengambil mata kuliah Pemrograman Berbasis Platform (CSGE602022) mengetahui struktur sebuah proyek aplikasi Django serta file dan konfigurasi yang penting dalam berjalannya aplikasi. Kamu dapat dengan bebas menyalin isi dari repositori ini atau memanfaatkan repositori ini sebagai pembelajaran sekaligus awalan dalam membuat sebuah proyek Django.
+Tanpa menggunakan virtual environment, kita masih tetap bisa membuat / mengembangkan aplikasi web berbasis Django. Namun, proyek yang kita buat akan kemungkinan besar bermasalah saat dijalankan dengan Django versi lain dari yang dipakai saat awal mengembangkan aplikasi. Hal tersebut terjadi karena tanpa virtual environment, proyek yang sudah kita kembangkan tersebut tidak bisa beradaptasi pada Django versi lain. Lalu, modul aplikasi yang kita gunakan dalam mengembangkan aplikasi juga bisa diakses dari luar, sehingga aplikasi-aplikasi lain memiliki akses terhadap modul tersebut. Maka, pemakaian virtual environment merupakan hal yang sangat penting dalam mengembangkan apikasi web dengan basis Django.
 
-## Cara Menggunakan
+referensi : https://code.tutsplus.com/id/tutorials/understanding-virtual-environments-in-python--cms-28272
 
-Apabila kamu ingin menggunakan repositori ini sebagai repositori awalan yang nantinya akan kamu modifikasi:
+3. Jelaskan bagaimana cara kamu mengimplementasikan poin 1 sampai dengan 4 di atas.
 
-1. Buka laman GitHub repositori templat kode, lalu klik tombol "**Use this template**"
-   untuk membuat salinan repositori ke dalam akun GitHub milikmu.
-2. Buka laman GitHub repositori yang dibuat dari templat, lalu gunakan perintah
-   `git clone` untuk menyalin repositorinya ke suatu lokasi di dalam sistem
-   berkas (_filesystem_) komputermu:
-
-   ```shell
-   git clone <URL ke repositori di GitHub> <path ke suatu lokasi di filesystem>
-   ```
-3. Masuk ke dalam repositori yang sudah di-_clone_ dan jalankan perintah berikut
-   untuk menyalakan _virtual environment_:
-
-   ```shell
-   python -m venv env
-   ```
-4. Nyalakan environment dengan perintah berikut:
-
-   ```shell
-   # Windows
-   .\env\Scripts\activate
-   # Linux/Unix, e.g. Ubuntu, MacOS
-   source env/bin/activate
-   ```
-5. Install dependencies yang dibutuhkan untuk menjalankan aplikasi dengan perintah berikut:
-
-   ```shell
-   pip install -r requirements.txt
-   ```
-
-6. Jalankan aplikasi Django menggunakan server pengembangan yang berjalan secara
-   lokal:
-
-   ```shell
-   python manage.py runserver
-   ```
-7. Bukalah `http://localhost:8000` pada browser favoritmu untuk melihat apakah aplikasi sudah berjalan dengan benar.
-
-## Contoh Deployment 
-
-Pada template ini, deployment dilakukan dengan memanfaatkan GitHub Actions sebagai _runner_ dan Heroku sebagai platform Hosting aplikasi. 
-
-Untuk melakukan deployment, kamu dapat melihat instruksi yang ada pada [Tutorial 0](https://pbp-fasilkom-ui.github.io/ganjil-2023/assignments/tutorial/tutorial-0).
-
-Untuk contoh aplikasi Django yang sudah di deploy, dapat kamu akses di [https://django-pbp-template.herokuapp.com/](https://django-pbp-template.herokuapp.com/)
-
-## Credits
-
-Template ini dibuat berdasarkan [PBP Ganjil 2021](https://gitlab.com/PBP-2021/pbp-lab) yang ditulis oleh Tim Pengajar Pemrograman Berbasis Platform 2021 ([@prakashdivyy](https://gitlab.com/prakashdivyy)) dan [django-template-heroku](https://github.com/laymonage/django-template-heroku) yang ditulis oleh [@laymonage, et al.](https://github.com/laymonage). Template ini dirancang sedemikian rupa sehingga mahasiswa dapat menjadikan template ini sebagai awalan serta acuan dalam mengerjakan tugas maupun dalam berkarya.
+Terdapat beberapa cara yang saya lakukan untuk mengimplementasikan instruksi 1-4. 
+- Pertama, diawali dengan membuat repositori baru bernama Tugas-2-Alifio dan melakukan clone repository ke perangkat saya untuk mendapatkan template yang akan saya gunakan. 
+- Kedua, saya membuka folder hasil clone tersebut di VsCode dan mulai mengerjakannya dari views.py. Mirip seperti lab 1, saya membuat fungsi show_katalog untuk menerima parameter request. Lalu, saya menampung data query pada variabel data_barang_katalog. Pada context, saya menambahkan nama dan NPM saya. Terakhir, saya melakukan return render(request, "katalog.html", context) untuk melakukan mapping ke katalog.html
+- Ketiga, saya melakukan routing terhadap views.py pada fungsi urls.py di folder template dengan memanggil fungsi show_katalog untuk menghubungkan antara HTML dan web browser. 
+- Keempat, saya melakukan mapping data-data yang sudah di-render di views.py agar dapat menampilkannya pada halaman HTML. Mapping tersebut saya lakukan pada katalog.html yang ada di folder templates untuk menampilkan Item Name, Item Price, Item Stock, Rating, Description, dan Item URL. Lalu, saya mengiterasi variabel list_katalog untuk menampilkan daftar data tersebut di tabel. Dilanjutkan dengan memanggil setiap variabel spesifik dari objek-objek pada list_katalog yang merupakan kontainer. 
+- Kelima, saya mengaktifkan environment pada CMD, melakukan migration, loaddata, dan menjalankan proyek dengan melakukan python manage.py runserver. Setelah itu, saya mengecek ke web http://localhost:8000/katalog/ apakah web sudah dapat menampilkan data-data sesuai soal.
+- Keeenam, saya melakukan deploy ke aplikasi Heroku. Diawali dengan melakukan git add-commit-push. Lalu, saya melakukan copy API key akun Heroku saya dan memasukkannya ke menu secret di Github. Terakhir, saya melakukan re-run worlkflow yang tadinya gagal.
