@@ -2,6 +2,8 @@ Readme Tugas 3
 
 README TUGAS 3
 
+Link deploy = https://aplikasi-fio.herokuapp.com/mywatchlist/
+
 1.	Jelaskan perbedaan antara JSON, XML, dan HTML!
 Berikut adalah perbedaan antara ketiganya:
 -	JSON 
