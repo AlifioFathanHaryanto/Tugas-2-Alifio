@@ -1,0 +1,112 @@
+[
+    {
+        "model":"mywatchlist.MyWatchList",
+        "pk":1,
+        "fields":{
+            "watched":"Yes",
+            "title":"5cm",
+            "rating":5,
+            "release_date":"12 Desember 2012",
+            "review":"Film ini menceritakan tentang persahabatan dan mengandung banyak moral value." 
+        }  
+    },
+    {
+        "model":"mywatchlist.MyWatchList",
+        "pk":2,
+        "fields":{
+            "watched":"Yes",
+            "title":"Fast & Furious 8",
+            "rating":5,
+            "release_date":"12 April 2017",
+            "review":"Film ini sangat cocok bagi penggemar mobil dan film action"            
+        }
+    },
+    {
+        "model":"mywatchlist.MyWatchList",
+        "pk":3,
+        "fields":{
+            "watched":"Yes",
+            "title":"Big Hero 6",
+            "rating":5,
+            "release_date":"7 November 2014",
+            "review":"Film ini sangat keren karena banyak menganimasikan berbagai teknologi baru, seperti robot yang dapat mengecek kesehatan manusia dan microbots."
+        }
+    },
+    {
+        "model":"mywatchlist.MyWatchList",
+        "pk":4,
+        "fields":{
+            "watched":"Yes",
+            "title":"Overdrive",
+            "rating":4,
+            "release_date":"4 Agustus 2017",
+            "review":"Film ini sangat menarik bagi pecinta mobil-mobil langka."
+        }
+    },
+    {
+        "model":"mywatchlist.MyWatchList",
+        "pk":5,
+        "fields":{
+            "watched":"No",
+            "title":"Top Gun",
+            "rating":5,
+            "release_date":"27 Mei 2022",
+            "review":"Adegan pesawatnya sangat seru dan cocok untuk pecinta dunia aviation" 
+        }
+    },
+    {
+        "model":"mywatchlist.MyWatchList",
+        "pk":6,
+        "fields":{
+            "watched":"Yes",
+            "title":"Jurassic World Dominion",
+            "rating":4,
+            "release_date":"8 Juni 2022",
+            "review":"Mantap"
+        }
+    },
+    {
+        "model":"mywatchlist.MyWatchList",
+        "pk":7,
+        "fields":{
+            "watched":"No",
+            "title":"The Greatest Showman",
+            "rating":4,
+            "release_date":"26 Desember 2017",
+            "review": "Sangat menghibur karena menampilkan drama dan musical yang keren."
+        }
+    },
+    {
+        "model":"mywatchlist.MyWatchList",
+        "pk":8,
+        "fields":{
+            "watched":"Yes",
+            "title":"Baby Driver",
+            "rating":4,
+            "release_date":"24 Agustus 2017",
+            "review":"Adegan menyetir untuk menghilang dari kejaran polisi sangat seru."
+        }
+    },
+    {
+        "model":"mywatchlist.MyWatchList",
+        "pk":9,
+        "fields":{
+            "watched":"Yes",
+            "title":"The Maze Runner",
+            "rating":4,
+            "release_date":"17 September 2014",
+            "review":"Percobaan para tokoh yang terjebak dalam labirin untuk keluar cukup menegangkan dan menambah sensasi adrenalin keseruan bagi penonton."
+        }
+    },
+    {
+        "model":"mywatchlist.MyWatchList",
+        "pk":10,
+        "fields":{
+            "watched":"Yes",
+            "title":"Cars 3",
+            "rating":5,
+            "release_date":"16 Agustus 2017",
+            "review":"Nice!!"
+        }
+    }
+]
