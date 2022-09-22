@@ -2,7 +2,10 @@ Readme Tugas 3
 
 README TUGAS 3
 
-Link deploy = https://aplikasi-fio.herokuapp.com/mywatchlist/
+Link deploy = 
+https://aplikasi-fio.herokuapp.com/mywatchlist/html/
+https://aplikasi-fio.herokuapp.com/mywatchlist/json/ 
+https://aplikasi-fio.herokuapp.com/mywatchlist/xml/ 
 
 1.	Jelaskan perbedaan antara JSON, XML, dan HTML!
 Berikut adalah perbedaan antara ketiganya:
@@ -33,6 +36,11 @@ Data delivery dibutuhkan dalam pengimplementasian sebuah platform untuk melakuka
 3.	Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
 Dalam mengimplementasikan seluruh checklist di atas, hal pertama yang saya lakukan adalah membuat new app pada folder proyek Django tugas 2 dengan nama mywatchlist. Saya membuat aplikasi baru dengan memberikan perintah python manage.py startapp mywatchlist. Lalu, saya melakukan penambahan path mywatchlist. Kemudian, saya membuat model mywatchlist pada models.py dengan atribut watched (bertipe charField), title (bertipe charField), rating (bertipe IntegerField), release_date (bertipe CharField), dan review (bertipe TextField). Lalu, saya menambahkan 10 data mengenai objek MyWatchList tadi yang berisikan data dan review dari film pada file json yang saya letakkan di dalam folder fixtures. Setelah itu, saya melakukan manage.py runserver untuk melihat apakah html saya sudah berhasil terbuat pada internet yang saya akses melalui search engine. Setelah HTML tersebut berhasil ditampilkan, saya lanjutkan dengan menyajikan data dengan format XML dan JSON mengikutin Langkah-langkah pada lab 2.
 Dalam menyajikan data dengan format XML dan JSON, hal pertama yang saya lakukan adalah membuat fungsi untuk menerima paramenter request pada views.py di folder mywatchlist. Lalu, saya melakukan import HttpResponse dan Serializer dari Django. Kemudian, saya membuat variabel pada fungsi tersebut bernama data sebagai penyimpan data hasil query. Lalu, saya melakukan return function dengan serialisasi (disesuaikan dengan formatnya, “xml” / “json”) dengan parameter data dan melakukan import fungsi yang sudah saya buat pada urls.py (disesuaikan dengan formatnya, show_json / show_xml). Terakhir, saya menambahkan path url dan dilanjutkan dengan memberikan perintah  python manage.py runserver untuk mengecek keberhasilan penyajian data dengan mengakses (http://localhost:8000/mywatchlist/xml/) atau (http://localhost:8000/mywatchlist/json/ ) di internet dengan search engine yang sudah saya download.
+
+4. Mengakses tiga URL di poin 6 menggunakan Postman, menangkap screenshot, dan menambahkannya ke dalam README.md
+![Postman_html](/Postman_html.png)
+![Postman_json](/Postman_json.png)
+![Postman_xml](/Postman_xml.png)
 
 
 Referensi :
