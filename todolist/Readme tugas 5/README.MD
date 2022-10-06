@@ -1,6 +1,9 @@
 https://aplikasi-fio.herokuapp.com/todolist/login/ 
 https://aplikasi-fio.herokuapp.com/todolist/ 
 
+Versi rapih readme tugas 5 saya :
+https://docs.google.com/document/d/1U4xL7MlNSFY9RfIiKhNMy4NIc6MHBDTZLUF-aXIe1hY/edit?usp=sharing 
+
 1.  Apa perbedaan dari Inline, Internal, dan External CSS? Apa saja kelebihan dan kekurangan dari masing-masing style?
 - INLINE CSS
 * Tempat pengimplementasian : Langsung pada tag elemen HTML yang ingin diubah. 
@@ -30,7 +33,7 @@ https://aplikasi-fio.herokuapp.com/todolist/
 3. Jelaskan tipe-tipe CSS selector yang kamu ketahui.
 - Selektor tag, berperan dalam melakukan pemilihan elemen. Contohnya:
 p {
-    color: greem;
+    color: green;
 }
 
 - Selektor class, berperan dalam melakukan pemilihan elemen sesuai dengan nama class yang diberikan. Ciri khasnya adalah tanda titik pada bagian depan selektor class. Contoh:
@@ -82,8 +85,6 @@ https://www.niagahoster.co.id/blog/perbedaan-internal-external-dan-inline-css/
 https://www.petanikode.com/css-dalam-html/ 
 https://codepolitan.com/blog/pengenalan-html5-belajar-html 
 https://www.petanikode.com/css-selektor/ 
-
-
 
 
 
