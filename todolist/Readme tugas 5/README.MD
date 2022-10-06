@@ -2,23 +2,23 @@ https://aplikasi-fio.herokuapp.com/todolist/login/
 https://aplikasi-fio.herokuapp.com/todolist/ 
 
 1.  Apa perbedaan dari Inline, Internal, dan External CSS? Apa saja kelebihan dan kekurangan dari masing-masing style?
-INLINE CSS
-Tempat pengimplementasian : Langsung pada tag elemen HTML yang ingin diubah. 
-Fungsi umum : Biasanya Inline CSS hanya digunakan untuk mengaplikasikan style hanya pada satu elemen (spesifik).
-Kelebihan : Pengimplementasiannya sangat cepat ketika kita hanya ingin mengubah / mencocokkan style perubahan pada satu elemen HTML yang kita inginkan. 
-Kekurangan : Sangat tidak efisien ketika digunakan untuk merubah style pada elemen HTML yang banyak seperti pada proyek dengan skala besar karena pengimplementasiannya bisa pada setiap satu elemen HTML.
+- INLINE CSS
+* Tempat pengimplementasian : Langsung pada tag elemen HTML yang ingin diubah. 
+* Fungsi umum : Biasanya Inline CSS hanya digunakan untuk mengaplikasikan style hanya pada satu elemen (spesifik).
+* Kelebihan : Pengimplementasiannya sangat cepat ketika kita hanya ingin mengubah / mencocokkan style perubahan pada satu elemen HTML yang kita inginkan. 
+* Kekurangan : Sangat tidak efisien ketika digunakan untuk merubah style pada elemen HTML yang banyak seperti pada proyek dengan skala besar karena pengimplementasiannya bisa pada setiap satu elemen HTML.
 
 - INTERNAL CSS
-Tempat pengimplementasian : Langsung di dalam tag '<style>' pada file CSS yang sama dengan file HTML (pada file HTML).
-Fungsi umum : Menciptakan interface pada sebuah halaman web yang unik, dimana interface tersebut tidak diimplementasikan di halaman website kita yang lain .
-Kelebihan : Cocok digunakan untuk membuat tampilan yang berbeda dari halaman lain. Lalu, HTML dan CSSnya berlokasi pada file yang sama, sehingga kita tidak perlu mengunggah beberapa file. Tak hanya itu, ID serta Class pada internal CSS dapat digunakan oleh internal stylesheet.
-Kekurangan : Sangat tidak efektif dan efisien saat kita ingin membuat website dengan banyak halaman yang menggunakan style CSS sama (menggunakan style CSS yang sama pada file-file HTML lain). Lalu, penggunaan internal CSS juga mengakibatkkan performa website kita cenderung lambat.
+* Tempat pengimplementasian : Langsung di dalam tag '<style>' pada file CSS yang sama dengan file HTML (pada file HTML).
+* Fungsi umum : Menciptakan interface pada sebuah halaman web yang unik, dimana interface tersebut tidak diimplementasikan di halaman website kita yang lain .
+* Kelebihan : Cocok digunakan untuk membuat tampilan yang berbeda dari halaman lain. Lalu, HTML dan CSSnya berlokasi pada file yang sama, sehingga kita tidak perlu mengunggah beberapa file. Tak hanya itu, ID serta Class pada internal CSS dapat digunakan oleh internal stylesheet.
+* Kekurangan : Sangat tidak efektif dan efisien saat kita ingin membuat website dengan banyak halaman yang menggunakan style CSS sama (menggunakan style CSS yang sama pada file-file HTML lain). Lalu, penggunaan internal CSS juga mengakibatkkan performa website kita cenderung lambat.
 
 - EXTERNAL CSS
-Tempat pengimplementasian : Pada file CSS yang terpisah/berbeda dengan file HTML. File tersebut merupakan file khusus dengan ekstensi ".css".
-Fungsi umum : Mengaplikasikan CSS pada banyak halaman website sekaligus.
-Kelebihan : Sangat efektif untuk digunakan dalam mengatur CSS pada proyek besar yang tiap halamannya ingin mengimplementasikan CSS yang identik. Lalu, durasi loading pengaksesan website kita juga lebih singkat.
-Kekurangan : Koneksi internet user yang lambat dapat menyebabkan file CSS mengalami kegagalan pemanggilan oleh file HTML. Hal ini menyebabkan tampilan halaman website kita yang banyak mengimplementasikan file CSS tersebut menjadi berantakan.
+* Tempat pengimplementasian : Pada file CSS yang terpisah/berbeda dengan file HTML. File tersebut merupakan file khusus dengan ekstensi ".css".
+* Fungsi umum : Mengaplikasikan CSS pada banyak halaman website sekaligus.
+* Kelebihan : Sangat efektif untuk digunakan dalam mengatur CSS pada proyek besar yang tiap halamannya ingin mengimplementasikan CSS yang identik. Lalu, durasi loading pengaksesan website kita juga lebih singkat.
+* Kekurangan : Koneksi internet user yang lambat dapat menyebabkan file CSS mengalami kegagalan pemanggilan oleh file HTML. Hal ini menyebabkan tampilan halaman website kita yang banyak mengimplementasikan file CSS tersebut menjadi berantakan.
 
 2. Jelaskan tag HTML5 yang kamu ketahui.
 - <!DOCTYPE html> = Berperan dalam pendeklarasian / pendefinisian untuk melakukan identifikasi mengenai jenis dokumen HTML yang kita gunakan.
