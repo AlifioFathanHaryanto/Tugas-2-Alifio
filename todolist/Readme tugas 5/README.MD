@@ -1,3 +1,6 @@
+https://aplikasi-fio.herokuapp.com/todolist/login/ 
+https://aplikasi-fio.herokuapp.com/todolist/ 
+
 1.  Apa perbedaan dari Inline, Internal, dan External CSS? Apa saja kelebihan dan kekurangan dari masing-masing style?
 - INLINE CSS
 Tempat pengimplementasian : Langsung pada tag elemen HTML yang ingin diubah. 
