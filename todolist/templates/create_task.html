@@ -8,11 +8,23 @@
 
 <div class = "add-task">
 
-    <h1>Add Task</h1>
+    <nav class="navbar navbar-expand-lg" style="background-color: #8FBC8F">
+    
+        <div class="container-fluid">
+            <div class = "login container d-flex flex-column justify-content-center align-items-center">
+          <a class="navbar-brand mb-0 h1"style="font-size: 30px">&#9997 Add Task </a>
+          </div>
+        </div>
+      </nav>
+      <style>
+        body {
+            background-color: #E1FFB1;
+        }
+    </style>
 
     <form method="POST" action="">
         {% csrf_token %}
-        <table>
+        <table align="center" >
             <tr>
                 <td>To do list title: </td>
                 <td><input type="text" name="title" placeholder="title"  class="form-control"></td>
@@ -25,7 +37,7 @@
 
             <tr>
                 <td></td>
-                <td><input class="btn submit_btn" type="submit" value="Submit"></td>
+                <td><input class="btn btn-primary" type="submit" value="Submit"></td>
             </tr> 
         </table>
     </form>

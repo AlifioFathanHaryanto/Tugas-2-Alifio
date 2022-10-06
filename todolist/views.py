@@ -14,7 +14,7 @@ from django.urls import reverse
 task_list = []
 @login_required(login_url='/todolist/login/')
 def show_todolist(request):
-    data_todolist = ToDoList.objects.filter(user=request.user),
+    data_todolist = ToDoList.objects.all().filter(user=request.user),
     context = {
         'list_todo': data_todolist,
         'user': request.user,
@@ -66,12 +66,8 @@ def create_task(request):
         description = request.POST.get('description')
         date = datetime.datetime.now()
         user = request.user
-        todolist_object = ToDoList(title=title, description=description, date=date, user=user)
+        todolist_object = ToDoList.objects.create(title=title, description=description, date=date, user=user)
         todolist_object.save()
         return redirect('todolist:show_todolist')
     context = {}
     return render(request, 'create_task.html', context)
-
-
-
-

@@ -1,5 +1,5 @@
 from django.contrib import admin
+from .models import ToDoList
 
 # Register your models here.
-from todolist.models import ToDoList
 admin.site.register(ToDoList)

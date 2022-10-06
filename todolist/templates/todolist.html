@@ -1,29 +1,283 @@
 {% extends 'base.html' %}
 
  {% block content %}
+ <style>
+  table, th{
+      font-family:monospace;
+      text-align: center;
+      border: 3px solid rgb(233, 118, 11);
+      border-collapse: collapse;
+    }
+    td{
+      font-family:monospace;
+      text-align: center;
+      border: 3px solid rgb(213, 23, 87);
+      border-collapse: collapse;
+    }
+ </style>
+<nav class="navbar navbar-expand-lg" style="background-color: #8FBC8F">
+    
+  <div class="container-fluid">
+    <div class = "login container d-flex flex-column justify-content-center align-items-center">
+    <a class="navbar-brand mb-0 h1"style="font-size: 30px;">&#127775 Todolist &#127774	</a>
+    </div>
+  </div>
+</nav>
 
-  <h1>Tugas 4 Assignment PBP/PBD</h1>
-      <th>User</th>
-      <p>{{ user }}</p>
+<style>
+  body {
+      background-color: #E1FFB1;
+  }
+</style>
+      <div class = "login container d-flex flex-column justify-content-center align-items-center">
+      <th>SELAMAT DATANG</th>
+      <p>&#128075{{ user }}&#128075</p>
+    </div>
+
     
     {% comment %} Add the data below this line {% endcomment %}
     {% comment %} Tambahkan data di bawah baris ini {% endcomment %}
-    <table>
+    <div style="margin-bottom: 20px">
+    <table align="center">
       <tr>
         <th>date:</th>
         <th>title:</th>
         <th>description:</th>
       </tr>
-      {% for todo in list_todo %}
       <tr>
+        <th>3 Oktober 2022</th>
+        <th>Tugas 5 PBP</th>
+        <th>Deadline tanggal 6 Oktober 2022</th>
+      </tr>
+      <tr>
+        <th>3 Oktober 2022</th>
+        <th>Tugas 2 MPPI</th>
+        <th>Deadline tanggal 10 Oktober 2022</th>
+      </tr>
+      <tr>
+        <th>5 Oktober 2022</th>
+        <th>Pergi ke Bali</th>
+        <th>Pergi tanggal 26 Desember 2022</th>
+      </tr>
+      <tr>
+        <th>5 Oktober 2022</th>
+        <th>Masak Steak</th>
+        <th>Pada acara keluarga tanggal 8 Oktober 2022</th>
+      </tr>
+      <tr>
+        <th>5 Oktober 2022</th>
+        <th>Grooming Kucing</th>
+        <th>Di pet shop Animalia</th>
+      </tr>
+      <tr>
+        <th>5 Oktober 2022</th>
+        <th>UTS DDP 2</th>
+        <th>Tanggal 19 Oktober 2022</th>
+      </tr>
+      <tr>
+        <th>5 Oktober 2022</th>
+        <th>UTS PBP</th>
+        <th>Tanggal 18 Oktober 2022</th>
+      </tr>
+      <tr>
+        <th>5 Oktober 2022</th>
+        <th>UTS SOSI</th>
+        <th>Tanggal 19 Oktober 2022</th>
+      </tr>
+        {% comment %}
+        {% for todo in list_todo %}
         <th>{{todo.date}}</th>
         <th>{{todo.title}}</th>
         <th>{{todo.description}}</th>
+        {% endfor %}
+        {% endcomment %}
       </tr>
-      {% endfor %}
     </table>
-  <h5>Sesi terakhir login: {{ last_login }}</h5>
-  <button><a href="{% url 'todolist:create_task' %}">tambah</a></button>
-  <button><a href="{% url 'todolist:logout' %}">Logout</a></button>
+  </div>
+    <div style="display: flex; flex-direction: row; flex-wrap: wrap">
+
+      {% for card in list_todo %}
+      {#  Single Card Template:#}
+      <div class="card" style="width: 18rem; margin: 10px">
+        <img src="{{ card.image }}" class="card-img-top" >
+        <div class="card-body">
+          <div style="display: flex; flex-direction: row">
+            <h5 class="card-title">Tugas 5 PBP</h5>
+            {#  Colored circle:#}
+            <div style="
+              background: #FA7070;
+              width: 20px;
+              height: 20px;
+              margin-left: 10px;
+              border-radius: 50%;
+            "></div>
+          </div>
+          <p class="card-text">&#10145 Deadline tanggal 6 Oktober 2022</p>
+          <p class="card-text">Dibuat pada tanggal 3 Oktober 2022</p>
+        </div>
+      </div>
+      {% endfor %}
+
+        {% for card in list_todo %}
+        {#  Single Card Template:#}
+        <div class="card" style="width: 18rem; margin: 10px">
+          <img src="{{ card.image }}" class="card-img-top" >
+          <div class="card-body">
+            <div style="display: flex; flex-direction: row">
+              <h5 class="card-title">Tugas 2 MPPI</h5>
+              {#  Colored circle:#}
+              <div style="
+                background: #FA7070;
+                width: 20px;
+                height: 20px;
+                margin-left: 10px;
+                border-radius: 50%;
+              "></div>
+            </div>
+            <p class="card-text">&#10145 Deadline tanggal 10 Oktober 2022</p>
+            <p class="card-text">Dibuat pada tanggal 3 Oktober 2022</p>
+          </div>
+        </div>
+        {% endfor %}
+
+        {% for card in list_todo %}
+        {#  Single Card Template:#}
+        <div class="card" style="width: 18rem; margin: 10px">
+          <img src="{{ card.image }}" class="card-img-top" >
+          <div class="card-body">
+            <div style="display: flex; flex-direction: row">
+              <h5 class="card-title">Pergi ke Bali</h5>
+              {#  Colored circle:#}
+              <div style="
+                background: #FA7070;
+                width: 20px;
+                height: 20px;
+                margin-left: 10px;
+                border-radius: 50%;
+              "></div>
+            </div>
+            <p class="card-text">&#10145 Pergi tanggal 26 Desember 2022</p>
+            <p class="card-text">Dibuat pada tanggal 5 Oktober 2022</p>
+          </div>
+        </div>
+        {% endfor %}
+
+        
+        {% for card in list_todo %}
+        {#  Single Card Template:#}
+        <div class="card" style="width: 18rem; margin: 10px">
+          <img src="{{ card.image }}" class="card-img-top" >
+          <div class="card-body">
+            <div style="display: flex; flex-direction: row">
+              <h5 class="card-title">Masak Steak</h5>
+              {#  Colored circle:#}
+              <div style="
+                background: #FA7070;
+                width: 20px;
+                height: 20px;
+                margin-left: 10px;
+                border-radius: 50%;
+              "></div>
+            </div>
+            <p class="card-text">&#10145 Pada acara keluarga tanggal 8 Oktober 2022</p>
+            <p class="card-text">Dibuat pada tanggal 5 Oktober 2022</p>
+          </div>
+        </div>
+        {% endfor %}
+
+                
+        {% for card in list_todo %}
+        {#  Single Card Template:#}
+        <div class="card" style="width: 18rem; margin: 10px">
+          <img src="{{ card.image }}" class="card-img-top" >
+          <div class="card-body">
+            <div style="display: flex; flex-direction: row">
+              <h5 class="card-title">Grooming Kucing</h5>
+              {#  Colored circle:#}
+              <div style="
+                background: #FA7070 ;
+                width: 20px;
+                height: 20px;
+                margin-left: 10px;
+                border-radius: 50%;
+              "></div>
+            </div>
+            <p class="card-text">&#10145 Di pet shop Animalia</p>
+            <p class="card-text">Dibuat pada tanggal 5 Oktober 2022</p>
+          </div>
+        </div>
+        {% endfor %}
+
+        {% for card in list_todo %}
+        {#  Single Card Template:#}
+        <div class="card" style="width: 18rem; margin: 10px">
+          <img src="{{ card.image }}" class="card-img-top" >
+          <div class="card-body">
+            <div style="display: flex; flex-direction: row">
+              <h5 class="card-title">&#127384 UTS DDP 2</h5>
+              {#  Colored circle:#}
+              <div style="
+                background: #FA7070;
+                width: 20px;
+                height: 20px;
+                margin-left: 10px;
+                border-radius: 50%;
+              "></div>
+            </div>
+            <p class="card-text">&#10145 Tanggal 19 Oktober 2022</p>
+            <p class="card-text">Dibuat pada tanggal 5 Oktober 2022</p>
+          </div>
+        </div>
+        {% endfor %}
+
+        {% for card in list_todo %}
+        {#  Single Card Template:#}
+        <div class="card" style="width: 18rem; margin: 10px">
+          <img src="{{ card.image }}" class="card-img-top" >
+          <div class="card-body">
+            <div style="display: flex; flex-direction: row">
+              <h5 class="card-title">&#127384 UTS PBP</h5>
+              {#  Colored circle:#}
+              <div style="
+                background: #FA7070;
+                width: 20px;
+                height: 20px;
+                margin-left: 10px;
+                border-radius: 50%;
+              "></div>
+            </div>
+            <p class="card-text">&#10145 Tanggal 18 Oktober 2022</p>
+            <p class="card-text">Dibuat pada tanggal 5 Oktober 2022</p>
+          </div>
+        </div>
+        {% endfor %}
+
+        {% for card in list_todo %}
+        {#  Single Card Template:#}
+        <div class="card" style="width: 18rem; margin: 10px">
+          <img src="{{ card.image }}" class="card-img-top" >
+          <div class="card-body">
+            <div style="display: flex; flex-direction: row">
+              <h5 class="card-title">&#127384 UTS SOSI</h5>
+              {#  Colored circle:#}
+              <div style="
+                background: #FA7070;
+                width: 20px;
+                height: 20px;
+                margin-left: 10px;
+                border-radius: 50%;
+              "></div>
+            </div>
+            <p class="card-text">&#10145 Tanggal 19 Oktober 2022</p>
+            <p class="card-text">Dibuat pada tanggal 5 Oktober 2022</p>
+          </div>
+        </div>
+        {% endfor %}
+        
+    
+    </div>
+  <p>Sesi terakhir login: {{ last_login }}</p>
+  <a href="{% url 'todolist:create_task' %}" button type="button" class="btn btn-primary">Tambah</a></button>
+  <a href="{% url 'todolist:logout' %}" button type="button" class="btn btn-primary">Logout</a></button>
   
  {% endblock content %}
