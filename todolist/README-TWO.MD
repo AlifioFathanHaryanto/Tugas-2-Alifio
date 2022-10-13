@@ -1,4 +1,5 @@
 Readme Tugas 6
+https://aplikasi-fio.herokuapp.com/todolist/login/ 
 
 1. Jelaskan perbedaan antara asynchronous programming dengan synchronous programming.
 - Pada asynchronus programming, program yang ingin diproses dalam waktu yang sama dapat dilakukan tanpa harus menunggu mengantri atau bisa dibilang tidak perlu adanya waktu tunggu akibat proses kode sebelumnya harus diselesaikan terlebih dahulu. Kita dapat menjalankan kode selanjutnya secara langsung. Dengan pemanggilan asynchronus programming, suatu sistem dapat melakukan pembaharuan tanpa harus direfresh atau dilakukan run ulang karena dengan asynchronus programming bisa menjalankan beberapa tugas secara bersamaan. 
