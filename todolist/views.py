@@ -9,12 +9,17 @@ from django.contrib.auth.decorators import login_required
 import datetime
 from django.http import HttpResponseRedirect
 from django.urls import reverse
+from django.core import serializers
+from django.http import HttpResponse
+from django.http import JsonResponse
+from todolist.models import ToDoList
+from django.http import HttpResponseBadRequest
 
 # Create your views here.
-task_list = []
 @login_required(login_url='/todolist/login/')
 def show_todolist(request):
-    data_todolist = ToDoList.objects.all().filter(user=request.user),
+    task_list = []
+    data_todolist = ToDoList.objects.filter(user=request.user),
     context = {
         'list_todo': data_todolist,
         'user': request.user,
@@ -71,3 +76,27 @@ def create_task(request):
         return redirect('todolist:show_todolist')
     context = {}
     return render(request, 'create_task.html', context)
+
+@login_required(login_url='/todolist/login/')
+def show_json(req):
+    task_list = ToDoList.objects.filter(user=req.user)
+    return HttpResponse(serializers.serialize("json", task_list), content_type="application/json")
+
+@login_required(login_url='/todolist/login/')
+def input_task(request):
+    if request.method == 'POST':
+        user = request.user
+        title = request.POST.get('title')
+        date = datetime.date.today()
+        description = request.POST.get('description')
+        todo = ToDoList.objects.create(title=title, description=description, date=date, user=user)
+
+        result = {
+            'fields':{
+                'title':todo.title,
+                'date':todo.date,
+                'description':todo.description,
+            },
+            'pk':todo.pk
+        }
+        return JsonResponse(result)
